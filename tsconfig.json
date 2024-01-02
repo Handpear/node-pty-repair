@@ -18,13 +18,12 @@
     "noUnusedParameters": false,
     "strict": true,
     "useDefineForClassFields": true,
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "target": "ES2015",
+    "lib": ["ES2015"],
+    "module": "CommonJS",
     "rootDir": ".",
     "outDir": "lib",
-    "sourceMap": true,
-    "lib": ["es2015"]
+    "sourceMap": true
   },
   "exclude": ["node_modules", "scripts", "index.js", "demo.js", "lib", "test", "examples"]
 }
