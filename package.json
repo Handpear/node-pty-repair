@@ -34,7 +34,7 @@
   "scripts": {
     "build": "tsc -b ./tsconfig.json",
     "watch": "tsc -b -w ./tsconfig.json",
-    "release": "pnpm build && pnpm publish --no-git-checks",
+    "release": "pnpm publish --no-git-checks",
     "prepare": "pnpm build && node scripts/post-install.js",
     "test": "cross-env NODE_ENV=test mocha -R spec --exit lib/src/*.test.js",
     "lint": "pnpm lint:eslint && pnpm lint:prettier",
