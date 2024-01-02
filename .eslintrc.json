@@ -1,0 +1,21 @@
+{
+  "root": true,
+  "extends": ["handpear", "handpear/typescript"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "radix": "off",
+    "no-param-reassign": "off",
+    "no-implicit-coercion": "off",
+    "new-cap": "off",
+    "max-params": "off",
+    "max-nested-callbacks": "off",
+    "@typescript-eslint/prefer-for-of": "off",
+    "@typescript-eslint/no-require-imports": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/method-signature-style": "off",
+    "@typescript-eslint/member-ordering": "off",
+    "@typescript-eslint/ban-types": "off"
+  }
+}

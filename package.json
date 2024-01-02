@@ -1,0 +1,64 @@
+{
+  "name": "node-pty-repair",
+  "description": "fork from node-pty PR 644",
+  "author": {
+    "name": "Microsoft Corporation"
+  },
+  "version": "0.0.1",
+  "packageManager": "pnpm@8.13.1",
+  "engines": {
+    "node": ">=v18.19.0",
+    "pnpm": ">=8.8.0"
+  },
+  "license": "MIT",
+  "main": "./lib/src/index.js",
+  "types": "./typings/node-pty.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/microsoft/node-pty-repair.git"
+  },
+  "files": [
+    "binding.gyp",
+    "lib/src/",
+    "scripts/",
+    "src/",
+    "deps/",
+    "typings/",
+    "tsconfig.json"
+  ],
+  "homepage": "https://github.com/Handpear/node-pty-repair",
+  "keywords": [
+    "pty",
+    "terminal"
+  ],
+  "scripts": {
+    "build": "tsc -b ./tsconfig.json",
+    "watch": "tsc -b -w ./tsconfig.json",
+    "release": "pnpm build && pnpm publish --no-git-checks",
+    "prepare": "pnpm build && node scripts/post-install.js",
+    "test": "cross-env NODE_ENV=test mocha -R spec --exit lib/src/*.test.js",
+    "lint": "pnpm lint:eslint && pnpm lint:prettier",
+    "lint:eslint": "eslint src --ext js,ts",
+    "lint:prettier": "prettier --write .",
+    "lib:up": "taze -I --exclude pnpm"
+  },
+  "dependencies": {
+    "node-addon-api": "^7.0.0",
+    "node-api-headers": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "cross-env": "^5.1.4",
+    "eslint": "^8.56.0",
+    "eslint-config-handpear": "^1.2.4",
+    "mocha": "10",
+    "node-gyp": "^9.4.0",
+    "pnpm": "^8.13.1",
+    "prettier": "^3.1.1",
+    "ps-list": "^6.0.0",
+    "typescript": "^5.3.3"
+  }
+}

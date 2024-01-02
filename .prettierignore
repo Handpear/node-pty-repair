@@ -1,0 +1,13 @@
+node_modules
+dist
+build
+lib
+
+*.svg
+*.min.{js,mjs,cjs,ts,mts,cts}
+
+pnpm-lock.yaml
+
+# auto import
+auto-import*.d.ts
+.eslintrc-auto-import*.json
